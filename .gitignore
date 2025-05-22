@@ -3,3 +3,5 @@
 .vscode
 /Scraper/myenv
 /Backend/__pycache__
+..DS_Store
+.gitignore
