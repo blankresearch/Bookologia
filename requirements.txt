@@ -1,0 +1,13 @@
+scrapy
+itemloaders
+python-dateutil
+w3lib
+itemadapter
+elasticsearch==8.9.0
+flask
+googlesearch-python
+duckduckgo-search
+PyMuPDF
+bcrypt
+requests
+certifi

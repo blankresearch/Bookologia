@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Terms & Privacy - Bookologia</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style/style.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style/logo.css') }}"
+    />
+  </head>
+  <body class="p-2">
+    <header class="top-0 pb-2 left-0 w-full p-6 px-8 z-50">
+      <div class="flex flex-row items-end justify-end">
+        <div class="relative">
+          <button
+            id="menu-button"
+            class="flex items-center"
+          >
+            <img
+              src="/static/icons/menu-2.svg"
+              alt="Menu"
+              class="w-6 h-6 mr-3 opacity-80 hover:opacity-100 cursor-pointer"
+            />
+          </button>
+          <div
+            id="menu-dropdown"
+            class="absolute right-0 mt-2 w-48 text-sm bg-white shadow-lg rounded-xl hidden"
+          >
+            <a
+              href="/collectionPage"
+              class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+            >
+              Collections
+            </a>
+            <a
+              href="/about"
+              class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+            >
+              About Us
+            </a>
+            <a
+              href="/privacy-policy"
+              class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+            >
+              Privacy Policy
+            </a>
+            <button
+              id="logout-button"
+              class="block w-full text-left px-4 py-2 text-red-600 hover:bg-gray-100"
+            >
+              Logout
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="max-w-3xl  mx-auto p-4 mt-4 gap-4 flex flex-col">
+        <div class="items-center justify-center flex flex-col mb-7">
+          <div>
+            <a
+              href="/"
+              class="text-color-logo font-logo text-7xl"
+            >
+              Bookologia
+            </a>
+          </div>
+          <div
+            href="/"
+            class="text-color-logo font-logo text-2xl"
+          >
+            Terms of Services & Privacy Policy
+          </div>
+        </div>
+
+        <div class="max-w-3xl  mx-auto p-4 mt-4 gap-4 flex flex-col">
+          <div
+            class="flex flex-row text-lg mt-6 text-gray-600 items-start bookolor-4 justify-start font-title"
+          >
+            1. Introduction
+          </div>
+          <div
+            class="flex flex-row text-md text-gray-600 items-start justify-start font-authorname"
+          >
+            Bookologia is a specialized search engine that indexes and organizes
+            links to book-related content retrieved from publicly available
+            sources, specifically Google and DuckDuckGo.
+          </div>
+
+          <div
+            class="flex flex-row text-lg mt-6 text-gray-600 items-start bookolor-4 justify-start font-title"
+          >
+            2. User Responsibilities
+          </div>
+          <div
+            class="flex flex-row text-md text-gray-600 items-start justify-start font-authorname"
+          >
+            Users are responsible for ensuring the legality of any links they
+            access. Bookologia does not verify or moderate the content of
+            external websites. If a user encounters inappropriate or illegal
+            content, they must report it directly to the host website.
+            <br />
+          </div>
+
+          <div
+            class="flex flex-row text-lg mt-6 text-gray-600 items-start bookolor-4 justify-start font-title"
+          >
+            3. Liability
+          </div>
+          <div
+            class="flex flex-row text-md text-gray-600 items-start justify-start font-authorname"
+          >
+            Bookologia is not responsible for broken links, unavailable content,
+            or external website policies. We do not endorse or guarantee the
+            accuracy of the information found on linked sites.
+          </div>
+
+          <div
+            class="flex flex-row text-lg mt-6 text-gray-600 items-start bookolor-4 justify-start font-title"
+          >
+            4. Copyright & DMCA
+          </div>
+          <div
+            class="flex flex-col text-md text-gray-600 items-start justify-start font-authorname"
+          >
+            Bookologia is a specialized search engine that indexes and organizes
+            links to book-related content retrieved from publicly available
+            sources, specifically Google and DuckDuckGo. We do not host, sell,
+            distribute, or provide direct access to any books or copyrighted
+            material. Our database consists solely of links gathered from these
+            search engines. Since Bookologia does not host or control the
+            content linked on external sites, we can only remove links from our
+            index upon valid copyright requests.
+
+            <br />
+
+            If you believe that a copyrighted work is being unlawfully
+            distributed, we recommend taking the following steps:
+            <br />
+
+            <br />
+            <ol class="list-decimal pl-5">
+              <li>
+                Contact the website that is hosting the infringing material
+                directly and request its removal.
+              </li>
+              <li>
+                Submit a copyright complaint to the search engines that index
+                and provide access to the content:
+                <ul class="list-disc pl-5">
+                  <li>
+                    <a
+                      href="https://support.google.com/legal/troubleshooter/1114905?hl=en"
+                      class="text-blue-600"
+                    >
+                      Google DMCA Report
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://duckduckgo.com/duckduckgo-help-pages/r-legal/report-copyright-or-trademark-infringement/"
+                      class="text-blue-600"
+                    >
+                      DuckDuckGo DMCA Report
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Contact Bookologia to request the removal of the link from our
+                search results.
+              </li>
+            </ol>
+            <br />
+
+            To submit a DMCA takedown request to Bookologia, send an email to
+            "bookologiaproject @ hotmail.com" with the subject line: "Book Link
+            DMCA Takedown". Your email must include the following details:
+            <br />
+
+            <ul class="list-disc pl-5">
+              <li>
+                An identification of the copyrighted work(s) or trademark(s)
+                that you claim have been infringed.
+              </li>
+              <li>
+                A description of the nature and location of the work(s) that you
+                claim to be infringing, including the URL(s) where the work(s)
+                are located.
+              </li>
+              <li>
+                A statement affirming that you have a good faith belief that use
+                of the material in the manner complained of is not authorized by
+                the rights holder, its agent, or the law.
+              </li>
+              <li>
+                A declaration that the information provided in your DMCA Notice
+                is accurate, and under penalty of perjury, that you are the
+                rights holder or are authorized to act on their behalf.
+              </li>
+            </ul>
+            <br />
+
+            Please note that even if we remove a link from our search index, it
+            may reappear if the original source remains accessible via general
+            search engines such as Google or DuckDuckGo. Our search engine
+            database is refreshed every 15 days, meaning that if infringing
+            content remains publicly indexed by other search engines, it may be
+            re-added to our search results. To ensure complete removal, steps
+            (1) and (2) should be taken before contacting us. For further
+            transparency, our search engine's indexing process is open-source.
+            You may review the details of how our system works on our GitHub
+            repository:
+            <a
+              href="https://github.com/yousboot/Bookologia"
+              class="text-blue-600"
+            >
+              GitHub - Bookologia
+            </a>
+            .
+          </div>
+
+          <div
+            class="flex flex-row text-lg mt-6 text-gray-600 items-start bookolor-4 justify-start font-title"
+          >
+            5. Privacy
+          </div>
+          <div
+            class="flex flex-row text-md text-gray-600 items-start justify-start font-authorname"
+          >
+            We only store the account information that the user provides on our
+            website; including likes, collection data, and account information.
+            We use session cookies to to maintain session integrity, and we do
+            not access any other information that is not explicitely provided by
+            the user. Session cookies are destroyed immediately after log out
+            action. No additional user data is stored. Users may request account
+            deletion at any time. We do not share, or sell or use the user's
+            data in any form other than providing services offereed by
+            Bookologia.
+          </div>
+
+          <div
+            class="flex flex-row text-lg mt-6 text-gray-600 items-start bookolor-4 justify-start font-title"
+          >
+            6. Service Availability
+          </div>
+          <div
+            class="flex flex-row text-md text-gray-600 items-start justify-start font-authorname"
+          >
+            Bookologia is an open-source project maintained by its creator. If
+            funding becomes insufficient or maintenance is no longer possible,
+            we reserve the right to discontinue the service at any time.
+          </div>
+
+          <div
+            class="flex flex-row text-lg mt-6 text-gray-600 items-start bookolor-4 justify-start font-title"
+          >
+            7. Voluntary Support
+          </div>
+          <div
+            class="flex flex-row text-md text-gray-600 items-start justify-start font-authorname"
+          >
+            Bookologia is funded by its creator and remains free to use. Users
+            may voluntarily support development via Patreon, but contributions
+            do not entitle donors to special access or privileges.
+          </div>
+
+          <div
+            class="flex flex-row text-lg mt-6 text-gray-600 items-start bookolor-4 justify-start font-title"
+          >
+            8. NSFW & User Discretion
+          </div>
+          <div
+            class="flex flex-row text-md text-gray-600 items-start justify-start font-authorname"
+          >
+            Some books indexed by Bookologia may contain NSFW (Not Safe for
+            Work) material. We do not filter or review book contents, so user
+            discretion is highly advised.
+          </div>
+
+          <div
+            class="flex flex-row text-lg mt-6 text-gray-600 items-start bookolor-4 justify-start font-title"
+          >
+            9. Changes to Terms
+          </div>
+          <div
+            class="flex flex-row text-md text-gray-600 items-start justify-start font-authorname"
+          >
+            These Terms of Service may be updated periodically. Continued use of
+            Bookologia constitutes acceptance of any modifications.
+          </div>
+
+          <div
+            class="flex flex-row text-lg mt-6 text-gray-600 items-start bookolor-4 justify-start font-title"
+          >
+            10. Contact Us
+          </div>
+          <div
+            class="flex flex-row text-md text-gray-600 items-start justify-start font-authorname"
+          >
+            For inquiries, DMCA requests, or other concerns, please contact us
+            at: bookologiaproject @ hotmail.com
+          </div>
+        </div>
+      </div>
+    </header>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="{{ url_for('static', filename='scripts/script.js') }}"></script>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+/Elastic
+/Migration
+.vscode
+/Scraper/myenv
+/Backend/__pycache__

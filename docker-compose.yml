@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  bookologia-es:
+    image: yousb0t/bookologia-elastic
+    container_name: bookologia-es
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+    ports:
+      - "9200:9200"
+    networks:
+      - bookologia-net
+
+  bookologia-app:
+    image: yousb0t/bookologia-app
+    container_name: bookologia-app
+    ports:
+      - "5001:5001"
+    depends_on:
+      - bookologia-es
+    networks:
+      - bookologia-net
+
+networks:
+  bookologia-net:
+    driver: bridge
