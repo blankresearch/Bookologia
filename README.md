@@ -78,3 +78,4 @@ For feedback or contributions, reach out to me:
 - [Blank Research page](https://blankresearch.com/)
 
 Made with ❤️ by Youssef.
+
