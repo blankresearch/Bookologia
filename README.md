@@ -3,7 +3,7 @@
 Bookologia is a specialized search engine, to find any book within seconds. 
 It is open source, and can be self-hosted easily on Docker.
 
-![welcome](./img/1-welcome-page.png)
+![welcome](./img/1-welcome.png)
 
 See all screenshots and details at : [http://www.blankresearch.com/Bookologia/](http://www.blankresearch.com/Bookologia/) 
 
