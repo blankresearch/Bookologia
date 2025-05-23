@@ -1,0 +1,168 @@
+@font-face {
+    font-family: "glittenRegular";
+    src: url("./fonts/Glitten-Regular.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-logo {
+    font-family: "glittenRegular", serif;
+}
+
+
+@font-face {
+    font-family: "0100";
+    src: url("./fonts/0100.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "0101";
+    src: url("./fonts/0101.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.font-0100 {
+    font-family: "0100", serif;
+}
+
+.font-0101 {
+    font-family: "0101", serif;
+}
+
+
+.text-color-logo {
+    color: #890022;
+}
+
+
+.button-color-menu {
+    background-color: #3b000f;
+    color: white;
+}
+
+@font-face {
+    font-family: "logo";
+    src: url("./fonts/1776_Independence\ W00\ Bold.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "aGaramondPro";
+    src: url("./fonts/AGaramondPro-Regular.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "appleSDGothicNeo";
+    src: url("./fonts/AppleSDGothicNeo.ttc") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "metropolisThin";
+    src: url("./fonts/Metropolis-Thin.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "hindmaduraiMedium";
+    src: url("./fonts/HindMadurai-Medium.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "hindmaduraiLight";
+    src: url("./fonts/HindMadurai-Light.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-text {
+    font-family: "aGaramondPro", serif;
+}
+
+.font-searchBar {
+    font-family: "hindmaduraiLight", sans-serif;
+}
+
+.font-button {
+    font-family: "hindmaduraiMedium", sans-serif;
+}
+
+.slider-wrapper {
+    width: 100%;
+}
+
+@font-face {
+    font-family: "devanagariSangam";
+    src: url("./fonts/Cherston\ Regular.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.font-title {
+    font-family: "devanagariSangam", sans-serif;
+}
+
+
+.bookolor-1 {
+    background-color: #ffd8e1;
+}
+
+.bookolor-6:hover {
+    background-color: #fef2f5;
+}
+
+.bookolor-2 {
+    background-color: #ff89a6;
+}
+
+.bookolor-3 {
+    background-color: #ff003f;
+}
+
+.bookolor-4 {
+    color: #890022;
+}
+
+.bookolor-5 {
+    background-color: #3b000f;
+}
+
+.bookolor-popup-1:hover {
+    background-color: #3b000f;
+}
+
+.bookolor-5-border {
+    border-style: solid;
+    border-color: #3b000f;
+}
+
+.bookolor-5-text {
+    color: #3b000f;
+}
+
+.bookolor-1-text {
+    color: #ffd8e1;
+}
+
+.tight-line {
+    line-height: 0.9 !important;
+}
+
+mark {
+    background-color: #3b000f;
+    color: white;
+
+    /* any color of your choice */
+}

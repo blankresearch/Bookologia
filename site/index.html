@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sample Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .zoomed {
+            transform: scale(1.5);
+            z-index: 50;
+        }
+    </style>
+</head>
+
+<body class="overflow-x-hidden">
+
+    <div class="min-h-screen flex flex-col items-center justify-center ">
+        <div class="p-10 mt-20 rounded-2xl max-w-2xl mb-10">
+            <div class="items-center justify-center flex flex-col gap-4 mb-7">
+                <div>
+                    <a href="/" class="text-color-logo font-logo text-7xl">
+                        Bookologia
+                    </a>
+                </div>
+                <div href="/" class="text-color-logo font-logo text-3xl">
+                    The right words find you.
+                </div>
+            </div>
+        </div>
+
+        <div class="relative w-full slider-wrapper h-[520px] max-w-6xl">
+            <button id="prevBtn"
+                class="absolute rounded-full -left-20 top-1/2 -translate-y-1/2 z-10 bg-gray-300 px-6 py-4 opacity-70 hover:bg-gray-500  hover:text-gray-300 text-gray-500 shadow">◀</button>
+            <div id="slider" class="flex gap-8 transition-transform duration-500">
+                <img src="img/book-links.png"
+                    class="w-[700px] h-[400px] rounded-2xl shadow-md object-contain cursor-pointer transition-transform duration-300" />
+                <img src="img/book-page.png"
+                    class="w-[700px] h-[400px] rounded-2xl shadow-md object-contain cursor-pointer transition-transform duration-300" />
+                <img src="img/collection-details-page.png"
+                    class="w-[700px] h-[400px] rounded-2xl shadow-md object-contain cursor-pointer transition-transform duration-300" />
+                <img src="img/collection-page.png"
+                    class="w-[700px] h-[400px] rounded-2xl shadow-md object-contain cursor-pointer transition-transform duration-300" />
+                <img src="img/home-page-2.png"
+                    class="w-[700px] h-[400px] rounded-2xl shadow-md object-contain cursor-pointer transition-transform duration-300" />
+                <img src="img/home-page.png"
+                    class="w-[700px] h-[400px] rounded-2xl shadow-md object-contain cursor-pointer transition-transform duration-300" />
+                <img src="img/search-page.png"
+                    class="w-[700px] h-[400px] rounded-2xl shadow-md object-contain cursor-pointer transition-transform duration-300" />
+                <img src="img/welcome-page.png"
+                    class="w-[700px] h-[400px] rounded-2xl shadow-md object-contain cursor-pointer transition-transform duration-300" />
+
+            </div>
+            <div id="zoomModal"
+                class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center hidden z-50">
+                <img id="zoomImg" class="max-w-full max-h-full rounded-xl" />
+            </div>
+            <button id="nextBtn"
+                class="absolute rounded-full -right-20 top-1/2 -translate-y-1/2 z-10 bg-gray-300 px-6 py-4 opacity-70 hover:bg-gray-500  hover:text-gray-300 text-gray-500  shadow">▶</button>
+        </div>
+        <div id="tooltip" class="fixed text-white bg-black text-sm px-2 py-1 rounded hidden z-50 pointer-events-none">
+            Click to exit</div>
+
+
+        <div class="max-w-5xl flex flex-col gap-4 mb-10">
+            <div class="flex gap-4 flex-row justify-center mb-4">
+                <button onclick="showTab(0)"
+                    class="px-6 py-2 button-color-menu font-0101 text-3xl rounded-full">Vision</button>
+                <button onclick="showTab(1)"
+                    class="px-6 py-2 button-color-menu font-0101 text-3xl  rounded-full">Documentation</button>
+                <button onclick="showTab(2)"
+                    class="px-6 py-2 button-color-menu font-0101 text-3xl  rounded-full">References</button>
+            </div>
+
+            <div class="bookolor-5-text tight-line font-0101 text-3xl ml-10 mt-4 mb-10" id="tab-0">
+                Bookologia is a specialized search engine, to find any book within seconds. It is open source, and can
+                be self-hosted easily on Docker. <br /><br />
+
+                <mark class="px-4 py-2 ">Now, why were we interested in creating this project?</mark>
+                <br /><br />
+
+                We believe there was a misunderstanding of the book market online, and a proof of that, none of the book
+                platforms in the last 20 years were successful. They were shaped around the idea that people would read
+                books and talk about them with others. Yet, every time a new project was launched, it was met with an
+                insufficient market for growth. <br /><br />
+
+                That is because they targeted the wrong audience. People who read books for entertainment, are not the
+                ones who search for them. The people who search for books are called: Knowledge workers. Engineers,
+                doctors, lawyers, marketers... they use bits of information from here and there to find solutions to
+                problems they have in hand. Most of the books they deal with are technical and specialized. They do not
+                read the books, they browse them. <br /><br />
+
+                In such a market, you cannot simply sell books, yet these people are the total majority of those
+                consuming them. Hence why profitability in this market is not possible, and only a public library model
+                would work. <br /><br />
+
+                <mark class="px-4 py-2 ">How does Bookologia work? </mark><br /><br />
+
+                Bookologia is a specialized search engine. Which means, it queries Google and other search engines on
+                your behalf, retrieves the links related to the book in question, analyze them, and present them to you.
+                Our value proposition is the organization of books in such a way that you know a lot about a book before
+                even opening it. The editions, other works by the author, and recommended similar ones picked carefully.
+                <br /><br />
+
+                A scraper engine is provided as well, to add as much meta-data to your library as you wish, or missing
+                books that you need to catalogue. All self-hosted locally. <br />
+
+                See documentation for more details.
+                <br /><br />
+
+                <mark class="px-4 py-2 ">Who created this project? </mark><br /><br />
+
+                We are Blank Research. An industrial research company. Our job is to conduct applied research to develop
+                new products, processes and technologies for commercial use. We help startups build their products, and
+                estblished companies to innovate new markets. <br /><br />
+
+                Main founding engineer is : <a class="text-blue-800 underline" target="_blank"
+                    href="https://www.linkedin.com/in/yousbot/">Youssef (yousbot).</a> <br />
+                Find more details about us visiting : <a class="text-blue-800 underline" target="_blank"
+                    href="https://blankresearch.com">https://blankresearch.com</a>
+                <br /><br />
+
+
+
+
+            </div>
+            <div class="text-gray-600 font-authorname hidden" id="tab-1">
+
+                <div class="text-lg text-white">
+                    <div>
+
+                        <h2 class="bookolor-5-text  tight-line font-0101 text-3xl ml-10 mt-4 mb-10">
+                            Bookologia is divided into 3 main parts, Elastic Search, Flack (backend) and Scraper
+                            (Scrapy). <br />
+                            Elastic Search is the database, Flask is the backend server, and Scraper, is a local agent
+                            that scrapes book metadata on demand. <br /> <br />
+
+                            As the goal of this project is to be self-hosted, we chose to use simple technologies.
+                            <br />
+                            Javascript, CSS Tailwind, HTML and Flask. No frameworks were used as no scalability was
+                            intended. The entire setup can take up to 1 minute (excluding download time). <br /><br />
+
+                            The easiest way to get Bookologia is through Docker. More details below.
+
+                            <img src="img/schema.png" class="w-[700px] h-[400px] rounded-2xl object-contain mb-8" />
+
+
+
+
+                            <div>
+                                <mark class="px-4 py-2 ">Docker installation </mark><br /><br />
+                                It is assumed you have Docker installed. If not, install it <a
+                                    class="text-blue-800 underline" target="_blank"
+                                    href="https://www.docker.com/products/docker-desktop/">here</a> then follow the next
+                                steps.
+                                <br /><br />
+
+                                <pre class="text-white font-mono text-sm bookolor-5 p-2 px-6 rounded-xl"><code><br /># wget https://raw.githubusercontent.com/blankresearch/Bookologia/refs/heads/main/docker-compose.yml <br /># docker compose up
+                                    </code></pre>
+                                <br />
+                                This will deploy both bookologia-es (Elastic) and bookologia-app in a dedicated network
+                                (bookologia-net), then you can access the app directly at : <a
+                                    class="text-blue-800 underline" target="_blank"
+                                    href="http://localhost:5001">http://localhost:5001</a>
+
+                                <br /><br />
+
+                                <mark class="px-4 py-2 ">Manual Deployment </mark><br /><br />
+                                To deploy Bookologia manually from the source. You must first host Elastic Search
+                                database on Docker following the next steps. <br /><br />
+                                <pre class="text-white font-mono text-sm bookolor-5 p-2 px-6 rounded-xl"><code><br /># docker run -d --name bookologia-es -p 9200:9200 \ <br /> -e discovery.type=single-node \ <br /> -e xpack.security.enabled=false \ <br /> yousb0t/bookologia-elastic
+                                </code></pre>
+                                <br />
+
+                                If you're interested in the dump directly. Find it
+                                <a class="text-blue-800 underline" target="_blank"
+                                    href="https://huggingface.co/datasets/blankresearch/Bookologia"> here.
+                                </a>
+
+                                <br />
+
+                                Then, download and run flask backend as follow : <br /><br />
+
+
+                                <pre class="text-white font-mono text-sm bookolor-5 p-2 px-6 rounded-xl"><code><br /># git clone https://github.com/blankresearch/Bookologia.git<br /># cd Bookologia <br /># pyenv install 3.10.7  <br /># pyenv local 3.10.7  <br /># python -m venv venv && source venv/bin/activate && pip install -r requirements.txt <br /># cd Backend <br /># python app.py</code>
+                                </pre>
+
+                                <br />
+                                then you can access the app directly at : <a class="text-blue-800 underline"
+                                    target="_blank" href="http://localhost:5001">http://localhost:5001</a>
+
+                                <br /><br />
+
+                                <mark class="px-4 py-2 ">Scraper Engine </mark><br /><br />
+
+                                The database comes preloaded with almost 2 million books. To add more books to this
+                                library, you need to launch the scraping engine, by providing it a range of IDs from
+                                GoodReads it doesnt have locally. <br /><br />
+                                Books are checked for deduplication before insertion. You can run the scraper as follow
+                                :<br /><br />
+
+                                <pre
+                                    class="text-white font-mono text-sm bookolor-5 p-2 px-6 rounded-xl"><code><br /># cd Bookologia/Scraper/billionBook<br /># scrapy crawl goodreads -a start_id=start_id -a end_id=end_id  <br /><br /><span class="bookolor-1-text"># Example: scrapy crawl goodreads -a start_id=120000 -a end_id=120100</span><br /><br /></code></pre>
+
+
+                            </div>
+
+                        </h2>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="hidden" id="tab-2">
+
+                <div>
+
+                    <div
+                        class="grid grid-cols-2 tight-line font-0101 text-3xl -ml-20 gap-x-6 gap-y-2  mt-4 mb-10 bookolor-5-text">
+                        <div class="text-right">Source Code:</div>
+                        <div><a class="text-blue-800 underline" href="https://github.com/blankresearch/Bookologia"
+                                target="_blank">https://github.com/blankresearch/Bookologia</a></div>
+                        <div class="text-right">Docker image (Flask App):</div>
+                        <div><a class="text-blue-800 underline" href="https://hub.docker.com/r/yousb0t/bookologia-app"
+                                target="_blank">https://hub.docker.com/r/yousb0t/bookologia-app</a></div>
+                        <div class="text-right">Docker image (Elastic Search):</div>
+                        <div><a class="text-blue-800 underline"
+                                href="https://hub.docker.com/r/yousb0t/bookologia-elastic"
+                                target="_blank">https://hub.docker.com/r/yousb0t/bookologia-elastic</a></div>
+                        <div class="text-right">Database Raw Dataset:</div>
+                        <div><a class="text-blue-800 underline"
+                                href="https://huggingface.co/datasets/blankresearch/Bookologia"
+                                target="_blank">https://huggingface.co/datasets/blankresearch/Bookologia</a></div>
+                        <div class="text-right">Maintainer:</div>
+                        <div><a class="text-blue-800 underline" href="https://www.linkedin.com/in/yousbot/"
+                                target="_blank">Youssef (yousbot)</a></div>
+                        <div class="text-right">Blank Research:</div>
+                        <div><a class="text-blue-800 underline" href="https://blankresearch.com"
+                                target="_blank">https://blankresearch.com</a></div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        function updateSlider() {
+            slider.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        const slider = document.getElementById("slider");
+        const imgs = slider.querySelectorAll("img");
+        const imgWidth = imgs[0].offsetWidth + 32; // 32 = gap-8
+
+        let index = 0;
+
+        document.getElementById("nextBtn").onclick = () => {
+            if (index < imgs.length - 1) index++;
+            slider.style.transform = `translateX(-${imgWidth * index}px)`;
+        };
+
+        document.getElementById("prevBtn").onclick = () => {
+            if (index > 0) index--;
+            slider.style.transform = `translateX(-${imgWidth * index}px)`;
+        };
+
+
+        const zoomModal = document.getElementById("zoomModal");
+        const zoomImg = document.getElementById("zoomImg");
+
+        imgs.forEach(img => {
+            img.addEventListener("click", () => {
+                zoomImg.src = img.src;
+                zoomModal.classList.remove("hidden");
+            });
+        });
+
+        zoomModal.addEventListener("click", () => {
+            zoomModal.classList.add("hidden");
+        });
+
+        const tooltip = document.getElementById('tooltip');
+
+        zoomModal.addEventListener('mousemove', e => {
+            tooltip.style.left = `${e.clientX + 10}px`;
+            tooltip.style.top = `${e.clientY + 10}px`;
+            tooltip.classList.remove('hidden');
+        });
+
+        zoomModal.addEventListener('mouseleave', () => {
+            tooltip.classList.add('hidden');
+        });
+
+        function showTab(i) {
+            document.querySelectorAll('[id^="tab-"]').forEach((el, idx) =>
+                el.classList.toggle('hidden', idx !== i)
+            );
+        }
+    </script>
+</body>
+
+</html>
